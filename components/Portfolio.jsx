@@ -6,6 +6,8 @@ export default function Portfolio() {
   const [activeFilter, setActiveFilter] = useState('all');
   const [isInView, setIsInView] = useState(false);
   const [hoveredProject, setHoveredProject] = useState(null);
+  const [selectedProject, setSelectedProject] = useState(null);
+  const [fullScreenImage, setFullScreenImage] = useState(null);
   
   useEffect(() => {
     const handleScroll = () => {
@@ -29,72 +31,77 @@ export default function Portfolio() {
   const projects = [
     {
       id: 1,
-      title: "E-commerce Facebook Ad Campaign",
-      description: "Increased sales by 45% through targeted Facebook ads",
+      title: "E-commerce Product Campaign",
+      description: "Boosted online sales by 67% for a fashion retailer through targeted product ads",
       category: "facebook-ads",
-      image: "/portfolio1.jpg",
+      image: "/marketing.jpg",
       stats: [
-        { label: "ROI", value: "320%" },
-        { label: "Conversion Rate", value: "4.8%" }
-      ]
+        { label: "Sales Increase", value: "67%" },
+        { label: "ROAS", value: "4.2x" },
+      ],
+      fullDescription: "This e-commerce campaign focused on showcasing the client's premium fashion products to a targeted audience. By creating compelling product ads with lifestyle imagery and strategic targeting, we achieved a 67% increase in online sales and a 4.2x return on ad spend within 30 days."
     },
     {
       id: 2,
-      title: "Content Strategy for SaaS Brand",
-      description: "Developed a comprehensive content strategy that increased engagement by 78%",
+      title: "E-commerce Catalog Optimization",
+      description: "Restructured product catalog and ads resulting in 43% higher conversion rate",
       category: "content",
-      image: "/portfolio2.jpg",
+      image: "/marketing4.jpg",
       stats: [
-        { label: "Engagement", value: "+78%" },
-        { label: "Followers", value: "+5.2K" }
-      ]
+        { label: "Conversion Rate", value: "+43%" },
+        { label: "CTR", value: "5.8%" },
+      ],
+      fullDescription: "We completely restructured this e-commerce client's product catalog and optimized their product feed for better ad performance. The improved catalog structure and enhanced product descriptions resulted in a 43% higher conversion rate and significantly improved click-through rates across all product categories."
     },
     {
       id: 3,
-      title: "Holiday Marketing Campaign",
-      description: "Seasonal campaign that generated 3x ROI for a retail client",
+      title: "Ads TQ Details Report",
+      description: "Result of ads with campaign optimization",
       category: "campaigns",
-      image: "/portfolio3.jpg",
+      image: "/marketing7.jpg",
       stats: [
-        { label: "ROI", value: "3x" },
-        { label: "Revenue", value: "$125K" }
-      ]
+        { label: "Cost Reduction", value: "32%" },
+        { label: "Revenue", value: "$218K" },
+      ],
+      fullDescription: "This project involved integrating Facebook Ads with the client's store through a third-party platform to enable automated campaign optimization. The integration allowed for real-time product inventory updates and dynamic pricing adjustments, resulting in a 32% reduction in advertising costs while generating $2,000 in revenue."
     },
     {
       id: 4,
-      title: "Lead Generation Campaign",
-      description: "Generated 500+ qualified leads for a B2B client",
+      title: "Marketing Analytics Dashboard",
+      description: "Developed comprehensive marketing analytics solution with actionable insights",
       category: "facebook-ads",
-      image: "/portfolio4.jpg",
+      image: "/marketing5.jpg",
       stats: [
-        { label: "Leads", value: "500+" },
-        { label: "Cost per Lead", value: "$12.40" }
-      ]
+        { label: "Data Points", value: "12K+" },
+        { label: "ROI Improvement", value: "28%" },
+      ],
+      fullDescription: "We developed a comprehensive marketing analytics dashboard that consolidated data from multiple channels to provide actionable insights. This solution helped the client identify underperforming campaigns and optimization opportunities, resulting in a 28% improvement in overall marketing ROI and more efficient budget allocation."
     },
     {
       id: 5,
-      title: "Social Media Rebrand",
-      description: "Complete social media presence overhaul for a lifestyle brand",
+      title: "Facebook Ads campaign results",
+      description: "Targeted campaign for new product launch with exceptional engagement metrics",
       category: "content",
-      image: "/portfolio5.jpg",
+      image: "/marketing1.jpg",
       stats: [
-        { label: "Engagement", value: "+120%" },
-        { label: "Brand Mentions", value: "+85%" }
-      ]
+        { label: "Engagement", value: "8.7%" },
+        { label: "Sales Goal", value: "142%" },
+      ],
+      fullDescription: "This individual product launch campaign was designed to create maximum impact for a single flagship product. Through carefully crafted messaging and targeted audience segments, we achieved an exceptional 8.7% engagement rate and exceeded the client's sales goal by 42% within the first week of launch."
     },
     {
       id: 6,
-      title: "Product Launch Campaign",
-      description: "Successful social media launch strategy for a new product",
+      title: "Single Product Ad Performance",
+      description: "Optimized single-product ad campaign with detailed performance analysis",
       category: "campaigns",
-      image: "/portfolio6.jpg",
+      image: "/marketing6.jpg",
       stats: [
-        { label: "Pre-orders", value: "1,200+" },
-        { label: "Reach", value: "250K+" }
-      ]
-    }
+        { label: "Conversion Rate", value: "6.3%" },
+        { label: "CPA Reduction", value: "41%" },
+      ],
+      fullDescription: "This campaign focused exclusively on optimizing ad performance for a single high-value product. Through extensive A/B testing of ad creative, copy variations, and audience targeting, we achieved a 6.3% conversion rate (3x industry average) and reduced the cost per acquisition by 41%, making this the client's most profitable individual product campaign."
+    },
   ];
-  
   const filteredProjects = activeFilter === 'all' 
     ? projects 
     : projects.filter(project => project.category === activeFilter);
@@ -103,9 +110,7 @@ export default function Portfolio() {
     <section id="portfolio" className="py-24 bg-gradient-to-b from-gray-50 to-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <span className="inline-block px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm font-medium mb-4">
-            MY WORK
-          </span>
+          
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Featured Projects</h2>
           <div className="w-24 h-1 bg-blue-600 mx-auto mb-6"></div>
           <p className="text-gray-600 max-w-2xl mx-auto text-lg">
@@ -133,14 +138,18 @@ export default function Portfolio() {
           {filteredProjects.map((project) => (
             <div 
               key={project.id} 
-              className="group bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden"
+              className="group bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden cursor-pointer"
               onMouseEnter={() => setHoveredProject(project.id)}
               onMouseLeave={() => setHoveredProject(null)}
+              onClick={() => setSelectedProject(project)}
             >
               <div className="relative overflow-hidden">
                 <div className="aspect-[4/3] bg-gradient-to-r from-blue-400 to-indigo-500 flex items-center justify-center">
-                  {/* Replace with actual image when available */}
-                  <div className="text-white font-bold text-lg">Project {project.id}</div>
+                  <img 
+                    src={project.image} 
+                    alt={project.title} 
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 
                 <div className={`absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent flex items-end transition-all duration-500 ${
@@ -198,6 +207,97 @@ export default function Portfolio() {
           </button>
         </div>
       </div>
+
+      {/* Project Details Modal */}
+      {selectedProject && (
+        <div className="fixed inset-0 bg-black/70 z-50 flex items-center justify-center p-4" onClick={() => setSelectedProject(null)}>
+          <div 
+            className="bg-white rounded-xl max-w-4xl w-full max-h-[90vh] overflow-auto" 
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="relative">
+              <div className="overflow-hidden">
+                <img 
+                  src={selectedProject.image} 
+                  alt={selectedProject.title} 
+                  className="w-full object-contain max-h-[500px] transition-transform duration-300 hover:scale-110 cursor-pointer"
+                  onClick={() => setFullScreenImage(selectedProject.image)}
+                />
+              </div>
+              <button 
+                className="absolute top-4 right-4 bg-white/20 backdrop-blur-sm rounded-full p-2 text-white hover:bg-white/40 transition-colors"
+                onClick={() => setSelectedProject(null)}
+              >
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6">
+                <span className="px-3 py-1 bg-blue-600 text-white rounded-full text-xs font-medium">
+                  {selectedProject.category.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')}
+                </span>
+              </div>
+            </div>
+            
+            <div className="p-6">
+              <h2 className="text-3xl font-bold text-gray-800 mb-6">{selectedProject.title}</h2>
+              
+              <div className="grid grid-cols-2 gap-4 mb-6">
+                {selectedProject.stats.map((stat, index) => (
+                  <div key={index} className="bg-blue-50 p-4 rounded-lg text-center">
+                    <div className="text-2xl font-bold text-blue-600">{stat.value}</div>
+                    <div className="text-sm text-gray-600">{stat.label}</div>
+                  </div>
+                ))}
+              </div>
+              
+              <h3 className="text-xl font-bold mb-4">Project Overview</h3>
+              <p className="text-gray-700 mb-6">{selectedProject.fullDescription}</p>
+              
+              <div className="border-t border-gray-200 pt-6">
+                <h3 className="text-xl font-bold mb-4">Key Strategies</h3>
+                <ul className="list-disc pl-5 space-y-2 text-gray-700">
+                  <li>Targeted audience segmentation based on demographics and interests</li>
+                  <li>Custom creative assets optimized for maximum engagement</li>
+                  <li>Continuous A/B testing to refine messaging and visuals</li>
+                  <li>Strategic budget allocation across different ad formats</li>
+                </ul>
+              </div>
+              
+              <div className="mt-8 flex justify-end">
+                <button 
+                  className="px-6 py-3 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition-colors"
+                  onClick={() => setSelectedProject(null)}
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Full Screen Image Modal */}
+      {fullScreenImage && (
+        <div 
+          className="fixed inset-0 bg-black z-[60] flex items-center justify-center p-4 cursor-zoom-out" 
+          onClick={() => setFullScreenImage(null)}
+        >
+          <button 
+            className="absolute top-4 right-4 bg-white/20 backdrop-blur-sm rounded-full p-2 text-white hover:bg-white/40 transition-colors z-10"
+            onClick={() => setFullScreenImage(null)}
+          >
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+          <img 
+            src={fullScreenImage} 
+            alt="Full screen view" 
+            className="max-w-full max-h-full object-contain"
+          />
+        </div>
+      )}
     </section>
   );
 }

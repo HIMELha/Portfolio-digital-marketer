@@ -14,7 +14,7 @@ export default function Footer() {
       <div className="container mx-auto px-4 relative z-10">
         <div className="grid md:grid-cols-4 gap-12">
           <div className="md:col-span-2">
-            <h3 className="text-2xl font-bold mb-6">Md Rana Islam</h3>
+            <h3 className="text-2xl font-bold mb-6">RN Technology</h3>
             <p className="text-gray-400 mb-8 max-w-md">
               Professional social media marketing specialist helping brands grow their online presence through strategic campaigns that drive engagement and conversions.
             </p>
@@ -109,22 +109,22 @@ export default function Footer() {
         
         <div className="border-t border-gray-800 mt-16 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400">
-            &copy; {currentYear} Md Rana Islam. All rights reserved.
+            &copy; {currentYear} RN Technology. All rights reserved.
           </p>
           <div className="mt-4 md:mt-0">
-            <ul className="flex space-x-6">
+          <ul className="flex space-x-6">
               <li>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors text-sm">
+                <a href="/privacy-policy" className="text-gray-400 hover:text-white transition-colors text-sm">
                   Privacy Policy
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors text-sm">
+                <a href="/terms-of-service" className="text-gray-400 hover:text-white transition-colors text-sm">
                   Terms of Service
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors text-sm">
+                <a href="/cookie-policy" className="text-gray-400 hover:text-white transition-colors text-sm">
                   Cookie Policy
                 </a>
               </li>

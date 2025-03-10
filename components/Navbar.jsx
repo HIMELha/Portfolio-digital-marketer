@@ -44,8 +44,8 @@ export default function Navbar() {
         <div className="flex justify-between items-center">
           <div className="text-2xl font-bold">
             <Link href="/" className="flex items-center">
-              <span className={`bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent font-extrabold`}>Md Rana</span>
-              <span className={`${scrolled ? 'text-gray-800' : 'text-white'} ml-1`}>Islam</span>
+              <span className={`bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent font-extrabold`}>RN </span>
+              <span className={`${scrolled ? 'text-gray-800' : 'text-white'} ml-1`}>Technology</span>
             </Link>
           </div>
           

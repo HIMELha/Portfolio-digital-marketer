@@ -1,4 +1,6 @@
+import Hero from "@/components/Hero";
 import "./globals.css";
+import Footer from "@/components/Footer";
 
 
 export const metadata = {
@@ -9,7 +11,13 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>{children}</body>
-    </html>
+      <body>
+        <main className="min-h-screen overflow-x-hidden">
+          <Hero />
+          {children}
+          <Footer />
+        </main>
+      </body>
+    </html >
   )
 }

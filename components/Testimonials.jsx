@@ -7,24 +7,38 @@ export default function Testimonials() {
   const testimonials = [
     {
       id: 1,
-      content: "Working with YourName transformed our social media presence. Our Facebook engagement increased by 200% and we saw a significant boost in conversions from social traffic.",
-      name: "Jane Smith",
-      position: "Marketing Director, Company Name",
+      content: "The Facebook ad campaign delivered exceptional results for our e-commerce store. We saw a 187% increase in ROAS and our customer acquisition cost dropped by 42%. Their strategic targeting and creative approach made all the difference.",
+      name: "Michael Chen",
+      position: "E-commerce Director, FashionHub",
       image: "/client-1.jpg"
     },
     {
       id: 2,
-      content: "The Facebook ad campaigns YourName created for our business exceeded all expectations. We achieved a 4.5x return on ad spend and acquired hundreds of new customers.",
-      name: "John Doe",
-      position: "CEO, Brand Name",
+      content: "After struggling with Facebook ads for months, we hired this team and saw immediate improvements. Our conversion rate jumped from 1.2% to 4.8% within just three weeks. The detailed performance reports and optimization strategy were exactly what we needed.",
+      name: "Sarah Williams",
+      position: "Marketing Manager, TechGrowth",
       image: "/client-2.jpg"
     },
     {
       id: 3,
-      content: "YourName's strategic approach to our social media marketing has been invaluable. Their expertise in Facebook marketing specifically has helped us reach new audiences we never thought possible.",
-      name: "Sarah Johnson",
-      position: "Founder, Company Name",
+      content: "The Facebook catalog integration completely transformed our product marketing. We're now reaching highly targeted audiences with dynamic product ads that have increased our click-through rate by 215%. The ROI has been incredible.",
+      name: "David Rodriguez",
+      position: "CEO, HomeStyle Decor",
       image: "/client-3.jpg"
+    },
+    {
+      id: 4,
+      content: "Our Facebook retargeting campaign exceeded all expectations. With a modest budget, we generated over $45,000 in sales from abandoned cart customers. The pixel implementation and audience segmentation strategy were flawless.",
+      name: "Jennifer Patel",
+      position: "Digital Marketing Lead, NutriWell",
+      image: "/client-4.jpg"
+    },
+    {
+      id: 5,
+      content: "The Facebook lead generation campaign delivered 342 qualified leads for our B2B service at a cost per lead that was 58% lower than our previous campaigns. The lead quality was exceptional, with a 28% conversion to sales calls.",
+      name: "Robert Thompson",
+      position: "Sales Director, BusinessSolutions",
+      image: "/client-5.jpg"
     }
   ];
 
@@ -57,9 +71,9 @@ export default function Testimonials() {
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-20">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Testimonials</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Client Success Stories</h2>
           <div className="w-24 h-1 bg-yellow-400 mx-auto mb-6"></div>
-          <p className="text-blue-100 max-w-2xl mx-auto text-lg">What my clients say about my work</p>
+          <p className="text-blue-100 max-w-2xl mx-auto text-lg">Real results from businesses that transformed their Facebook advertising</p>
         </div>
         
         <div className="max-w-5xl mx-auto">
@@ -75,9 +89,12 @@ export default function Testimonials() {
                       <div className="text-5xl text-yellow-400 mb-6">"</div>
                       <p className="text-xl md:text-2xl leading-relaxed mb-10">{testimonial.content}</p>
                       <div className="flex items-center">
-                        <div className="w-16 h-16 rounded-full bg-gray-300 mr-4 overflow-hidden border-2 border-white/30">
-                          {/* Replace with actual image */}
-                          <div className="w-full h-full flex items-center justify-center text-xs text-gray-500">Image</div>
+                        <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-white/30">
+                          <img 
+                            src={`https://randomuser.me/api/portraits/${testimonial.id % 2 === 0 ? 'women' : 'men'}/${testimonial.id + 10}.jpg`}
+                            alt={testimonial.name}
+                            className="w-full h-full object-cover"
+                          />
                         </div>
                         <div>
                           <h4 className="font-bold text-xl">{testimonial.name}</h4>
@@ -133,16 +150,16 @@ export default function Testimonials() {
                   </svg>
                 ))}
               </div>
-              <span className="text-white font-medium">5.0 Average Rating</span>
+              <span className="text-white font-medium">4.9 Average Client Satisfaction</span>
             </div>
           </div>
           
-          <h3 className="text-2xl md:text-3xl font-bold mb-6">Ready to achieve similar results?</h3>
+          <h3 className="text-2xl md:text-3xl font-bold mb-6">Ready to transform your Facebook advertising?</h3>
           <a 
             href="#contact" 
             className="inline-flex items-center px-8 py-4 bg-white text-blue-900 rounded-full font-medium hover:bg-blue-50 transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-1 duration-300 btn-shine"
           >
-            Get Started Today
+            Schedule a Strategy Call
           </a>
         </div>
       </div>
