@@ -8,13 +8,14 @@ import Footer from '@/components/Footer';
 
 export default function Home() {
   return (
-    <>
+    <main className="min-h-screen overflow-x-hidden">
       <Hero />
       <About />
       <Services />
       <Portfolio />
       <Testimonials />
       <Contact />
-    </>
+      <Footer />
+    </main>
   )
 }

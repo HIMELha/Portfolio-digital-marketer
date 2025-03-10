@@ -112,7 +112,7 @@ export default function Footer() {
             &copy; {currentYear} RN Technology. All rights reserved.
           </p>
           <div className="mt-4 md:mt-0">
-          <ul className="flex space-x-6">
+          {/* <ul className="flex space-x-6">
               <li>
                 <a href="/privacy-policy" className="text-gray-400 hover:text-white transition-colors text-sm">
                   Privacy Policy
@@ -128,7 +128,7 @@ export default function Footer() {
                   Cookie Policy
                 </a>
               </li>
-            </ul>
+            </ul> */}
           </div>
         </div>
       </div>

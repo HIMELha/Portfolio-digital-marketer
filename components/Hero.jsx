@@ -22,7 +22,7 @@ export default function Hero() {
 
       <div className="container mx-auto px-4 h-full flex items-center pt-20 md:pt-32 pb-32">
         <div className="grid md:grid-cols-2 gap-12 items-center relative z-10">
-          <div className="space-y-8 order-1 md:order-0 animate-fadeIn">
+          <div className="space-y-8 order animate-fadeIn">
             <div className="inline-block px-3 py-1 bg-white/10 backdrop-blur-sm rounded-full text-sm font-medium mb-2">
               Social Media Marketing Expert
             </div>
@@ -113,11 +113,17 @@ export default function Hero() {
               </div>
             </div>
           </div>
-          <div className="order-0 md:order-1 h-full">
+          <div className="order-0 h-full">
             <div className="relative h-full">
               <div className="absolute -inset-4 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full opacity-20 blur-3xl"></div>
               <div className="h-full flex justify-center items-center">
-                <img src={"/RN2.png"} alt="RN Technology" className="w-full " />
+                
+                  <img
+                    src={"/RN2.png"}
+                    alt="RN Technology"
+                    className="w-full "
+                  />
+               
               </div>
             </div>
           </div>
