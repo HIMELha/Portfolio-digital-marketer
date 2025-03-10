@@ -55,15 +55,15 @@ export default function Portfolio() {
     },
     {
       id: 3,
-      title: "Ads TQ Details Report",
-      description: "Result of ads with campaign optimization",
+      title: "N2S Feed Optimization Campaign",
+      description: "Optimized Native to Search (N2S) feeds resulting in 32% cost reduction and significant revenue growth",
       category: "campaigns",
       image: "/marketing7.jpg",
       stats: [
         { label: "Cost Reduction", value: "32%" },
         { label: "Revenue", value: "$218K" },
       ],
-      fullDescription: "This project involved integrating Facebook Ads with the client's store through a third-party platform to enable automated campaign optimization. The integration allowed for real-time product inventory updates and dynamic pricing adjustments, resulting in a 32% reduction in advertising costs while generating $2,000 in revenue."
+      fullDescription: "This project involved optimizing Native to Search (N2S) feeds for a major client in the e-commerce sector. By implementing advanced feed structure and strategic keyword mapping, we created a seamless flow between native traffic sources and search platforms. The optimization resulted in a 32% reduction in acquisition costs while generating $218K in revenue through improved feed quality and conversion rates."
     },
     {
       id: 4,
@@ -77,18 +77,7 @@ export default function Portfolio() {
       ],
       fullDescription: "We developed a comprehensive marketing analytics dashboard that consolidated data from multiple channels to provide actionable insights. This solution helped the client identify underperforming campaigns and optimization opportunities, resulting in a 28% improvement in overall marketing ROI and more efficient budget allocation."
     },
-    {
-      id: 5,
-      title: "Facebook Ads campaign results",
-      description: "Targeted campaign for new product launch with exceptional engagement metrics",
-      category: "content",
-      image: "/marketing1.jpg",
-      stats: [
-        { label: "Engagement", value: "8.7%" },
-        { label: "Sales Goal", value: "142%" },
-      ],
-      fullDescription: "This individual product launch campaign was designed to create maximum impact for a single flagship product. Through carefully crafted messaging and targeted audience segments, we achieved an exceptional 8.7% engagement rate and exceeded the client's sales goal by 42% within the first week of launch."
-    },
+  
     {
       id: 6,
       title: "Single Product Ad Performance",
@@ -100,6 +89,18 @@ export default function Portfolio() {
         { label: "CPA Reduction", value: "41%" },
       ],
       fullDescription: "This campaign focused exclusively on optimizing ad performance for a single high-value product. Through extensive A/B testing of ad creative, copy variations, and audience targeting, we achieved a 6.3% conversion rate (3x industry average) and reduced the cost per acquisition by 41%, making this the client's most profitable individual product campaign."
+    },
+    {
+      id: 5,
+      title: "Google & Bing Search Arbitrage Campaign",
+      description: "Implemented cross-platform search arbitrage strategy with exceptional ROI metrics",
+      category: "content",
+      image: "/marketing1.jpg",
+      stats: [
+        { label: "Traffic Growth", value: "187%" },
+        { label: "ROI", value: "342%" },
+      ],
+      fullDescription: "This search arbitrage campaign leveraged the price difference between traffic sources to maximize profit. We implemented a sophisticated strategy utilizing Google and Bing feeds (YHS, RSOC, AFD) with optimized landing pages. Through carefully crafted content and strategic bidding, we achieved a 187% increase in qualified traffic and a remarkable 342% ROI, making this one of our most successful search arbitrage implementations."
     },
   ];
   const filteredProjects = activeFilter === 'all' 

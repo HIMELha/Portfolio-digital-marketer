@@ -7,35 +7,35 @@ export default function Testimonials() {
   const testimonials = [
     {
       id: 1,
-      content: "The Facebook ad campaign delivered exceptional results for our e-commerce store. We saw a 187% increase in ROAS and our customer acquisition cost dropped by 42%. Their strategic targeting and creative approach made all the difference.",
+      content: "The search arbitrage campaign delivered exceptional results for our e-commerce store. We saw a 187% increase in ROAS and our customer acquisition cost dropped by 42%. Their strategic optimization of Google and Bing feeds made all the difference.",
       name: "Michael Chen",
       position: "E-commerce Director, FashionHub",
       image: "/client-1.jpg"
     },
     {
       id: 2,
-      content: "After struggling with Facebook ads for months, we hired this team and saw immediate improvements. Our conversion rate jumped from 1.2% to 4.8% within just three weeks. The detailed performance reports and optimization strategy were exactly what we needed.",
+      content: "After struggling with N2S optimization for months, we hired this team and saw immediate improvements. Our conversion rate jumped from 1.2% to 4.8% within just three weeks. The detailed performance reports and feed optimization strategy were exactly what we needed.",
       name: "Sarah Williams",
       position: "Marketing Manager, TechGrowth",
       image: "/client-2.jpg"
     },
     {
       id: 3,
-      content: "The Facebook catalog integration completely transformed our product marketing. We're now reaching highly targeted audiences with dynamic product ads that have increased our click-through rate by 215%. The ROI has been incredible.",
+      content: "The YHS and RSOC feed integration completely transformed our traffic acquisition. We're now reaching highly targeted audiences with optimized landing pages that have increased our click-through rate by 215%. The ROI has been incredible.",
       name: "David Rodriguez",
       position: "CEO, HomeStyle Decor",
       image: "/client-3.jpg"
     },
     {
       id: 4,
-      content: "Our Facebook retargeting campaign exceeded all expectations. With a modest budget, we generated over $45,000 in sales from abandoned cart customers. The pixel implementation and audience segmentation strategy were flawless.",
+      content: "Our search arbitrage strategy exceeded all expectations. With a modest budget, we generated over $45,000 in revenue from optimized traffic sources. The implementation and audience segmentation strategy across multiple platforms were flawless.",
       name: "Jennifer Patel",
       position: "Digital Marketing Lead, NutriWell",
       image: "/client-4.jpg"
     },
     {
       id: 5,
-      content: "The Facebook lead generation campaign delivered 342 qualified leads for our B2B service at a cost per lead that was 58% lower than our previous campaigns. The lead quality was exceptional, with a 28% conversion to sales calls.",
+      content: "The combined social media and search arbitrage campaign delivered 342 qualified leads for our B2B service at a cost per lead that was 58% lower than our previous campaigns. The traffic quality was exceptional, with a 28% conversion to sales calls.",
       name: "Robert Thompson",
       position: "Sales Director, BusinessSolutions",
       image: "/client-5.jpg"
@@ -73,7 +73,7 @@ export default function Testimonials() {
         <div className="text-center mb-20">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Client Success Stories</h2>
           <div className="w-24 h-1 bg-yellow-400 mx-auto mb-6"></div>
-          <p className="text-blue-100 max-w-2xl mx-auto text-lg">Real results from businesses that transformed their Facebook advertising</p>
+          <p className="text-blue-100 max-w-2xl mx-auto text-lg">Real results from businesses that transformed their traffic acquisition with search arbitrage</p>
         </div>
         
         <div className="max-w-5xl mx-auto">
@@ -96,7 +96,7 @@ export default function Testimonials() {
                             className="w-full h-full object-cover"
                           />
                         </div>
-                        <div>
+                        <div className="ml-4">
                           <h4 className="font-bold text-xl">{testimonial.name}</h4>
                           <p className="text-blue-200">{testimonial.position}</p>
                         </div>
@@ -154,7 +154,7 @@ export default function Testimonials() {
             </div>
           </div>
           
-          <h3 className="text-2xl md:text-3xl font-bold mb-6">Ready to transform your Facebook advertising?</h3>
+          <h3 className="text-2xl md:text-3xl font-bold mb-6">Ready to transform your traffic acquisition strategy?</h3>
           <a 
             href="#contact" 
             className="inline-flex items-center px-8 py-4 bg-white text-blue-900 rounded-full font-medium hover:bg-blue-50 transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-1 duration-300 btn-shine"

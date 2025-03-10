@@ -24,18 +24,18 @@ export default function Hero() {
         <div className="grid md:grid-cols-2 gap-12 items-center relative z-10">
           <div className="space-y-8 order animate-fadeIn">
             <div className="inline-block px-3 py-1 bg-white/10 backdrop-blur-sm rounded-full text-sm font-medium mb-2">
-              Social Media Marketing Expert
+              Search Arbitrage Specialist
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-              Elevate Your Brand With{" "}
+              Maximize Revenue With{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-500">
                 Strategic
               </span>{" "}
-              Social Media
+              Traffic Arbitrage
             </h1>
             <p className="text-xl md:text-2xl text-blue-100 leading-relaxed">
-              Transforming businesses through data-driven Facebook marketing
-              campaigns that deliver measurable results.
+              Optimizing search feeds from Google, Bing, and Yahoo (N2S, YHS, RSOC, AFD) 
+              to drive profitable traffic and maximize ROI.
             </p>
             <div className="flex flex-wrap gap-4 pt-4">
               <Link

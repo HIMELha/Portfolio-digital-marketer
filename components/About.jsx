@@ -11,7 +11,7 @@ export default function About() {
           <h2 className="text-3xl md:text-4xl font-bold mb-4">About Me</h2>
           <div className="w-24 h-1 bg-blue-600 mx-auto mb-6"></div>
           <p className="text-gray-600 max-w-2xl mx-auto text-lg">
-            My journey in transforming brands through social media
+            My journey in mastering search arbitrage and traffic optimization
           </p>
         </div>
 
@@ -41,27 +41,27 @@ export default function About() {
               </h3>
               <div className="flex flex-wrap gap-3 mt-4">
                 <span className="px-4 py-1.5 bg-blue-50 text-blue-600 rounded-full text-sm font-medium border border-blue-100">
-                  Social Media Expert
+                  Search Arbitrage Specialist
                 </span>
                 <span className="px-4 py-1.5 bg-indigo-50 text-indigo-600 rounded-full text-sm font-medium border border-indigo-100">
-                  Facebook Ads Specialist
+                  Traffic Optimization Expert
                 </span>
                 <span className="px-4 py-1.5 bg-purple-50 text-purple-600 rounded-full text-sm font-medium border border-purple-100">
-                  Digital Marketer
+                  Media Buyer
                 </span>
               </div>
             </div>
 
             <p className="text-gray-700 text-lg leading-relaxed">
-              I'm a passionate social media marketing specialist with over a
-              decade of experience in creating impactful Facebook marketing
-              campaigns that drive engagement, increase brand awareness, and
-              generate measurable ROI.
+              I'm a passionate search arbitrage specialist with over a
+              decade of experience in optimizing traffic from Google, Bing, and Yahoo 
+              (N2S, YHS, RSOC, and AFD feeds) to generate measurable ROI and maximize revenue.
             </p>
             <p className="text-gray-700 text-lg leading-relaxed">
-              My approach combines creative content strategies with data-driven
-              insights to help businesses connect with their target audience and
-              achieve their marketing goals.
+              We work in search feed and referral traffic, specializing in traffic arbitrage. 
+              Our expertise lies in Native to Search (N2S), S2S, and D2S fields, where we 
+              strategically buy traffic from Facebook, Taboola, Outbrain, and Google Ads to 
+              create profitable conversion funnels.
             </p>
 
             <div className="grid grid-cols-3 gap-6 py-6">
@@ -76,12 +76,12 @@ export default function About() {
                   120+
                 </div>
                 <div className="text-gray-600 font-medium">
-                  Projects Completed
+                  Campaigns Optimized
                 </div>
               </div>
               <div className="text-center p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow">
                 <div className="text-4xl font-bold text-blue-600 mb-2">5M+</div>
-                <div className="text-gray-600 font-medium">Audience Reach</div>
+                <div className="text-gray-600 font-medium">Monthly Visitors</div>
               </div>
             </div>
 
