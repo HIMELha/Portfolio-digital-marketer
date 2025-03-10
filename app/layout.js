@@ -13,7 +13,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         <main className="min-h-screen overflow-x-hidden">
-          <Hero />
+          
           {children}
           <Footer />
         </main>
